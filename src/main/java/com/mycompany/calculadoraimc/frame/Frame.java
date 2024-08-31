@@ -37,7 +37,7 @@ public final class Frame extends JFrame {
         txtResultado = new JTextArea();
         panel = new JPanel();
 
-        label.setBounds(40, 10, 250, 100);
+        label.setBounds(40, 5, 250, 100);
         label.setForeground(Color.red);
         label.setFont(new Font("ARIAL", Font.BOLD, 22));
         labelAltura.setBounds(40, 50, 120, 100);
@@ -54,7 +54,7 @@ public final class Frame extends JFrame {
         txtResultado.setLineWrap(true);
         txtResultado.setEditable(false);
 
-        panel.setPreferredSize(new Dimension(300, 400));
+        panel.setPreferredSize(new Dimension(300, 300));
         panel.add(label);
         panel.add(labelAltura);
         panel.add(labelPeso);
@@ -68,6 +68,7 @@ public final class Frame extends JFrame {
         this.add(panel);
         this.pack();
         this.setVisible(true);
+        this.setResizable(false);
         this.setLocationRelativeTo(null);
 
         CulcularIMC();
@@ -78,6 +79,8 @@ public final class Frame extends JFrame {
     public JButton CulcularIMC() {
         btnCalcular.addActionListener((e) -> {
             Resultado();
+            txtAltura.setText("");
+            txtPeso.setText("");
         });
         return btnCalcular;
     }
