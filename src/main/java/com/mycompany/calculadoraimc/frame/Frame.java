@@ -55,6 +55,7 @@ public final class Frame extends JFrame {
         txtResultado.setEditable(false);
 
         panel.setPreferredSize(new Dimension(300, 300));
+        panel.setBackground(Color.CYAN);
         panel.add(label);
         panel.add(labelAltura);
         panel.add(labelPeso);
