@@ -3,6 +3,7 @@ package com.mycompany.calculadoraimc.frame;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.event.KeyEvent;
 import java.text.DecimalFormat;
 import java.text.MessageFormat;
 import javax.swing.BorderFactory;
@@ -72,12 +73,12 @@ public final class Frame extends JFrame {
         this.setResizable(false);
         this.setLocationRelativeTo(null);
 
-        CulcularIMC();
+        CalcularIMC();
         Sair();
 
     }
 
-    public JButton CulcularIMC() {
+    public JButton CalcularIMC() {
         btnCalcular.addActionListener((e) -> {
             Resultado();
             txtAltura.setText("");
