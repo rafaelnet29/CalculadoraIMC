@@ -27,55 +27,9 @@ public final class Frame extends JFrame {
     JPanel panel;
 
     public Frame() {
-
-        label = new JLabel("CALCULADORA IMC");
-        labelAltura = new JLabel("ALTURA");
-        labelPeso = new JLabel("PESO");
-        txtAltura = new JTextField();
-        txtPeso = new JTextField();
-        btnCalcular = new JButton("CALCULAR IMC");
-        btnSair = new JButton("Sair");
-        txtResultado = new JTextArea();
-        panel = new JPanel();
-
-        label.setBounds(40, 5, 250, 100);
-        label.setForeground(Color.red);
-        label.setFont(new Font("ARIAL", Font.BOLD, 22));
-        labelAltura.setBounds(40, 50, 120, 100);
-        labelAltura.setFont(new Font("ARIAL", Font.BOLD, 18));
-        txtAltura.setBounds(130, 90, 100, 20);
-        labelPeso.setBounds(40, 90, 120, 100);
-        labelPeso.setFont(new Font("ARIAL", Font.BOLD, 18));
-        txtPeso.setBounds(130, 130, 100, 20);
-        btnCalcular.setBounds(40, 170, 120, 20);
-        btnSair.setBounds(170, 170, 70, 20);
-        txtResultado.setBounds(40, 220, 200, 60);
-        txtResultado.setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.BLACK));
-        txtResultado.setFont(new Font("ARIAL", Font.BOLD, 14));
-        txtResultado.setLineWrap(true);
-        txtResultado.setEditable(false);
-
-        panel.setPreferredSize(new Dimension(300, 300));
-        panel.setBackground(Color.CYAN);
-        panel.add(label);
-        panel.add(labelAltura);
-        panel.add(labelPeso);
-        panel.add(txtAltura);
-        panel.add(txtPeso);
-        panel.add(btnCalcular);
-        panel.add(btnSair);
-        panel.add(txtResultado);
-        panel.setLayout(null);
-
-        this.add(panel);
-        this.pack();
-        this.setVisible(true);
-        this.setResizable(false);
-        this.setLocationRelativeTo(null);
-
+        CriarFrame();
         CalcularIMC();
         Sair();
-
     }
 
     public JButton CalcularIMC() {
@@ -125,5 +79,52 @@ public final class Frame extends JFrame {
             txtResultado.setForeground(Color.black);
         }
         return imc;
+    }
+
+    public void CriarFrame() {
+        label = new JLabel("CALCULADORA IMC");
+        labelAltura = new JLabel("ALTURA");
+        labelPeso = new JLabel("PESO");
+        txtAltura = new JTextField();
+        txtPeso = new JTextField();
+        btnCalcular = new JButton("CALCULAR IMC");
+        btnSair = new JButton("Sair");
+        txtResultado = new JTextArea();
+        panel = new JPanel();
+
+        label.setBounds(40, 5, 250, 100);
+        label.setForeground(Color.red);
+        label.setFont(new Font("ARIAL", Font.BOLD, 22));
+        labelAltura.setBounds(40, 50, 120, 100);
+        labelAltura.setFont(new Font("ARIAL", Font.BOLD, 18));
+        txtAltura.setBounds(130, 90, 100, 20);
+        labelPeso.setBounds(40, 90, 120, 100);
+        labelPeso.setFont(new Font("ARIAL", Font.BOLD, 18));
+        txtPeso.setBounds(130, 130, 100, 20);
+        btnCalcular.setBounds(40, 170, 120, 20);
+        btnSair.setBounds(170, 170, 70, 20);
+        txtResultado.setBounds(40, 220, 200, 60);
+        txtResultado.setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.BLACK));
+        txtResultado.setFont(new Font("ARIAL", Font.BOLD, 14));
+        txtResultado.setLineWrap(true);
+        txtResultado.setEditable(false);
+
+        panel.setPreferredSize(new Dimension(300, 300));
+        panel.setBackground(Color.CYAN);
+        panel.add(label);
+        panel.add(labelAltura);
+        panel.add(labelPeso);
+        panel.add(txtAltura);
+        panel.add(txtPeso);
+        panel.add(btnCalcular);
+        panel.add(btnSair);
+        panel.add(txtResultado);
+        panel.setLayout(null);
+
+        this.add(panel);
+        this.pack();
+        this.setVisible(true);
+        this.setResizable(false);
+        this.setLocationRelativeTo(null);
     }
 }
