@@ -53,27 +53,27 @@ public final class Frame extends JFrame {
 
         double imc = peso / (altura * altura);
         if (imc < 18.5) {
-            txtResultado.setText(MessageFormat.format("Seu IMC : {0} {1}",
+            txtResultado.setText(MessageFormat.format("Seu IMC : {0} \n{1}",
                     new DecimalFormat("#.00").format(imc), " MAGREZA PREUCUPANTE!! "));
             txtResultado.setForeground(Color.red);
         } else if ((imc >= 18.5) && (imc < 24.9)) {
-            txtResultado.setText(MessageFormat.format("Seu IMC : {0} {1}",
+            txtResultado.setText(MessageFormat.format("Seu IMC : {0} \n{1}",
                     new DecimalFormat("#.00").format(imc), " NORMAL!! "));
             txtResultado.setForeground(Color.blue);
         } else if ((imc >= 25) && (imc < 29.9)) {
-            txtResultado.setText(MessageFormat.format("Seu IMC : {0} {1}",
+            txtResultado.setText(MessageFormat.format("Seu IMC : {0} \n{1}",
                     new DecimalFormat("#.00").format(imc), " SOBREPESO!! "));
             txtResultado.setForeground(Color.green);
         } else if ((imc >= 30) && (imc < 34.9)) {
-            txtResultado.setText(MessageFormat.format("Seu IMC : {0} {1}",
+            txtResultado.setText(MessageFormat.format("Seu IMC : {0} \n{1}",
                     new DecimalFormat("#.00").format(imc), " OBESIDADE GRAU #1!! "));
             txtResultado.setForeground(Color.yellow);
         } else if ((imc >= 35) && (imc < 39.9)) {
-            txtResultado.setText(MessageFormat.format("Seu IMC : {0} {1}",
+            txtResultado.setText(MessageFormat.format("Seu IMC : {0} \n{1}",
                     new DecimalFormat("#.00").format(imc), " OBESIDADE GRAU #2!! "));
             txtResultado.setForeground(Color.DARK_GRAY);
         } else {
-            txtResultado.setText(MessageFormat.format("Seu IMC : {0} {1}",
+            txtResultado.setText(MessageFormat.format("Seu IMC : {0} \n{1}",
                     new DecimalFormat("#.00").format(imc), " OBESIDADE GRAU #3!! "));
             txtResultado.setForeground(Color.black);
         }
