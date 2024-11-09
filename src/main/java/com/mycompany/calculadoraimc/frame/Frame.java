@@ -49,7 +49,7 @@ public final class Frame extends JFrame {
         return btnCalcular;
     }
     
-    /***
+     /***
      * Metodo responsavel para encerrar
      * o frame 
      * @return metodo Sair
@@ -60,6 +60,7 @@ public final class Frame extends JFrame {
         });
         return btnSair;
     }
+    
     /***
      * metodo responsavel para 
      * calcular e mostrar o resultado
@@ -102,7 +103,7 @@ public final class Frame extends JFrame {
     /***
      * Metodo para criar o frame 
      * contendo todas as configurações
-     * para sseu funcionamento
+     * para seu funcionamento
      * @return Frame
      */
     public void CriarFrame() {
