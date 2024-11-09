@@ -25,12 +25,21 @@ public final class Frame extends JFrame {
     JTextArea txtResultado;
     JPanel panel;
 
+    /***
+     * Metodo construtor
+     * @return Construtor
+     */
     public Frame() {
         CriarFrame();
         CalcularIMC();
         Sair();
     }
-
+    
+    /***
+     * Metodo responsavel para
+     * acionar o calculo do IMC
+     * @return calcular IMC
+     */
     public JButton CalcularIMC() {
         btnCalcular.addActionListener((e) -> {
             Resultado();
@@ -39,14 +48,24 @@ public final class Frame extends JFrame {
         });
         return btnCalcular;
     }
-
+    
+    /***
+     * Metodo responsavel para encerrar
+     * o frame 
+     * @return metodo Sair
+     */
     public JButton Sair() {
         btnSair.addActionListener((e) -> {
             this.dispose();
         });
         return btnSair;
     }
-
+    /***
+     * metodo responsavel para 
+     * calcular e mostrar o resultado
+     * do calculo do IMC
+     * @return Calculo do IMC 
+     */
     public Double Resultado() {
         double peso = Double.parseDouble(txtPeso.getText());
         double altura = Double.parseDouble(txtAltura.getText());
@@ -79,8 +98,15 @@ public final class Frame extends JFrame {
         }
         return imc;
     }
-
+    
+    /***
+     * Metodo para criar o frame 
+     * contendo todas as configurações
+     * para sseu funcionamento
+     * @return Frame
+     */
     public void CriarFrame() {
+        //instancias
         label = new JLabel("CALCULADORA IMC");
         labelAltura = new JLabel("ALTURA");
         labelPeso = new JLabel("PESO");
@@ -90,7 +116,8 @@ public final class Frame extends JFrame {
         btnSair = new JButton("Sair");
         txtResultado = new JTextArea();
         panel = new JPanel();
-
+        
+        //configuração dos componentes
         label.setBounds(40, 5, 250, 100);
         label.setForeground(Color.red);
         label.setFont(new Font("ARIAL", Font.BOLD, 22));
@@ -107,7 +134,11 @@ public final class Frame extends JFrame {
         txtResultado.setFont(new Font("ARIAL", Font.BOLD, 14));
         txtResultado.setLineWrap(true);
         txtResultado.setEditable(false);
-
+        
+        /***
+         * configuração e adição dos componentes 
+         * no panel
+         */
         panel.setPreferredSize(new Dimension(300, 300));
         panel.setBackground(Color.CYAN);
         panel.add(label);
@@ -119,7 +150,8 @@ public final class Frame extends JFrame {
         panel.add(btnSair);
         panel.add(txtResultado);
         panel.setLayout(null);
-
+        
+        //configuração do frame
         this.add(panel);
         this.pack();
         this.setVisible(true);
