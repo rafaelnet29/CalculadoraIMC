@@ -1,6 +1,6 @@
 package com.mycompany.calculadoraimc.frame;
 
-import java.awt.Color;
+import java.awt.Color; 
 import java.awt.Dimension;
 import java.awt.Font;
 import java.text.DecimalFormat;
