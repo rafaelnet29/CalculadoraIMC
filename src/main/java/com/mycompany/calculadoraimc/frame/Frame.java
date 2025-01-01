@@ -114,7 +114,7 @@ public final class Frame extends JFrame {
         txtAltura = new JTextField();
         txtPeso = new JTextField();
         btnCalcular = new JButton("CALCULAR IMC");
-        btnSair = new JButton("Sair");
+        btnSair = new JButton("SAIR");
         txtResultado = new JTextArea();
         panel = new JPanel();
         
