@@ -107,7 +107,7 @@ public final class Frame extends JFrame {
      * @return Frame
      */
     public void CriarFrame() {
-        //instancias
+        //instancias dos componentes do frame
         label = new JLabel("CALCULADORA IMC");
         labelAltura = new JLabel("ALTURA");
         labelPeso = new JLabel("PESO");
