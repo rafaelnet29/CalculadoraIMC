@@ -104,10 +104,9 @@ public final class Frame extends JFrame {
      * Metodo para criar o frame 
      * contendo todas as configurações
      * para seu funcionamento
-     * @return Frame
      */
     public void CriarFrame() {
-        //instancias dos componentes do frame
+        //instancias dos componentes
         label = new JLabel("CALCULADORA IMC");
         labelAltura = new JLabel("ALTURA");
         labelPeso = new JLabel("PESO");
@@ -138,7 +137,7 @@ public final class Frame extends JFrame {
         
         /***
          * configuração e adição dos componentes 
-         * no panel
+         * no JPanel
          */
         panel.setPreferredSize(new Dimension(300, 300));
         panel.setBackground(Color.CYAN);
@@ -152,7 +151,7 @@ public final class Frame extends JFrame {
         panel.add(txtResultado);
         panel.setLayout(null);
         
-        //configuração do frame
+        //configuração do JFrame
         this.add(panel);
         this.pack();
         this.setVisible(true);
