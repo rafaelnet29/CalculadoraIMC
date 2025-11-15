@@ -5,6 +5,6 @@ import com.mycompany.calculadoraimc.frame.Frame;
 public class CalculadoraIMC {
 
     public static void main(String[] args) {
-        Frame frame = new Frame();
+        new Frame();
     }
 }
