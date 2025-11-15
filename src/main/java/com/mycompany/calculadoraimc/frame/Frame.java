@@ -40,9 +40,9 @@ public final class Frame extends JFrame {
      * acionar o calculo do IMC
      * @return calcular IMC
      */
-    public JButton Resultado() {
+    public JButton CalcularIMC() {
         btnCalcular.addActionListener((e) -> {
-            CalcularIMC();
+            Resultado();
             txtAltura.setText("");
             txtPeso.setText("");
         });
@@ -67,7 +67,7 @@ public final class Frame extends JFrame {
      * do calculo do IMC
      * @return Calculo do IMC 
      */
-    public Double CalcularIMC() {
+    public Double Resultado() {
         double peso = Double.parseDouble(txtPeso.getText());
         double altura = Double.parseDouble(txtAltura.getText());
 
