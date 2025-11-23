@@ -22,17 +22,18 @@ public final class Frame extends JFrame {
     JTextField txtPeso;
     JButton btnCalcular;
     JButton btnSair;
+    JButton btnLimpar;
     JTextArea txtResultado;
     JPanel panel;
 
     /***
      * Metodo construtor
-     * @return Construtor
      */
     public Frame() {
         CriarFrame();
         CalcularIMC();
         Sair();
+        Limpar();
     }
     
     /***
@@ -43,8 +44,6 @@ public final class Frame extends JFrame {
     public JButton CalcularIMC() {
         btnCalcular.addActionListener((e) -> {
             Resultado();
-            txtAltura.setText("");
-            txtPeso.setText("");
         });
         return btnCalcular;
     }
@@ -61,6 +60,14 @@ public final class Frame extends JFrame {
         return btnSair;
     }
     
+    public JButton Limpar(){
+        btnLimpar.addActionListener((e) -> {
+            txtAltura.setText("");
+            txtPeso.setText("");
+            txtResultado.setText("");
+        });
+        return btnLimpar;
+    }    
     /***
      * metodo responsavel para 
      * calcular e mostrar o resultado
@@ -114,6 +121,7 @@ public final class Frame extends JFrame {
         txtPeso = new JTextField();
         btnCalcular = new JButton("CALCULAR IMC");
         btnSair = new JButton("SAIR");
+        btnLimpar = new JButton("LIMPAR");
         txtResultado = new JTextArea();
         panel = new JPanel();
         
@@ -127,8 +135,9 @@ public final class Frame extends JFrame {
         labelPeso.setBounds(40, 90, 120, 100);
         labelPeso.setFont(new Font("ARIAL", Font.BOLD, 18));
         txtPeso.setBounds(130, 130, 100, 20);
-        btnCalcular.setBounds(40, 170, 120, 20);
-        btnSair.setBounds(170, 170, 70, 20);
+        btnCalcular.setBounds(80, 160, 120, 20);
+        btnSair.setBounds(170, 193, 70, 20);
+        btnLimpar.setBounds(40, 193, 80, 20);
         txtResultado.setBounds(40, 220, 200, 60);
         txtResultado.setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.BLACK));
         txtResultado.setFont(new Font("ARIAL", Font.BOLD, 14));
@@ -148,6 +157,7 @@ public final class Frame extends JFrame {
         panel.add(txtPeso);
         panel.add(btnCalcular);
         panel.add(btnSair);
+        panel.add(btnLimpar);
         panel.add(txtResultado);
         panel.setLayout(null);
         
