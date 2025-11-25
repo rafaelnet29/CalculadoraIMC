@@ -18,6 +18,7 @@ public final class Frame extends JFrame {
     JLabel label;
     JLabel labelAltura;
     JLabel labelPeso;
+    JLabel labelVersion;
     JTextField txtAltura;
     JTextField txtPeso;
     JButton btnCalcular;
@@ -117,6 +118,7 @@ public final class Frame extends JFrame {
         label = new JLabel("CALCULADORA IMC");
         labelAltura = new JLabel("ALTURA");
         labelPeso = new JLabel("PESO");
+        labelVersion = new JLabel("2.1.0v");
         txtAltura = new JTextField();
         txtPeso = new JTextField();
         btnCalcular = new JButton("CALCULAR IMC");
@@ -126,14 +128,16 @@ public final class Frame extends JFrame {
         panel = new JPanel();
         
         //configuração dos componentes
-        label.setBounds(40, 5, 250, 100);
+        label.setBounds(20, 3, 270, 110);
         label.setForeground(Color.red);
-        label.setFont(new Font("ARIAL", Font.BOLD, 22));
+        label.setFont(new Font("ARIAL", Font.BOLD, 26));
         labelAltura.setBounds(40, 50, 120, 100);
         labelAltura.setFont(new Font("ARIAL", Font.BOLD, 18));
         txtAltura.setBounds(130, 90, 100, 20);
         labelPeso.setBounds(40, 90, 120, 100);
         labelPeso.setFont(new Font("ARIAL", Font.BOLD, 18));
+        labelVersion.setBounds(10, 280, 50, 20);
+        labelVersion.setEnabled(false);
         txtPeso.setBounds(130, 130, 100, 20);
         btnCalcular.setBounds(80, 160, 120, 20);
         btnSair.setBounds(170, 193, 70, 20);
@@ -153,6 +157,7 @@ public final class Frame extends JFrame {
         panel.add(label);
         panel.add(labelAltura);
         panel.add(labelPeso);
+        panel.add(labelVersion);
         panel.add(txtAltura);
         panel.add(txtPeso);
         panel.add(btnCalcular);
