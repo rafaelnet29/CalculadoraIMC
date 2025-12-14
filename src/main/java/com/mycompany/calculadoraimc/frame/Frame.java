@@ -61,6 +61,11 @@ public final class Frame extends JFrame {
         return btnSair;
     }
     
+    /***
+     * Metodo responsavel para limpar
+     * os campos do frame 
+     * @return metodo Limpar
+     */
     public JButton Limpar(){
         btnLimpar.addActionListener((e) -> {
             txtAltura.setText("");
