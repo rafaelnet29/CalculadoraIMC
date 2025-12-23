@@ -81,8 +81,8 @@ public final class Frame extends JFrame {
      * @return Calculo do IMC 
      */
     public Double Resultado() {
-        double peso = Double.parseDouble(txtPeso.getText());
-        double altura = Double.parseDouble(txtAltura.getText());
+        double peso = Double.parseDouble(txtPeso.getText().replace(",", "."));
+        double altura = Double.parseDouble(txtAltura.getText().replace(",", "."));
 
         double imc = peso / (altura * altura);
         if (imc < 18.5) {
