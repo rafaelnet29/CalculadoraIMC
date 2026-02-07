@@ -133,14 +133,16 @@ public final class Frame extends JFrame {
         panel = new JPanel();
         
         //configuração dos componentes
-        label.setBounds(20, 3, 270, 110);
+        label.setBounds(20, 2, 270, 110);
         label.setForeground(Color.red);
         label.setFont(new Font("ARIAL", Font.BOLD, 26));
         labelAltura.setBounds(40, 50, 120, 100);
         labelAltura.setFont(new Font("ARIAL", Font.BOLD, 18));
         txtAltura.setBounds(130, 90, 100, 20);
+        txtAltura.setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.RED));
         labelPeso.setBounds(40, 90, 120, 100);
         labelPeso.setFont(new Font("ARIAL", Font.BOLD, 18));
+        txtPeso.setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.RED));
         labelVersion.setBounds(10, 280, 50, 20);
         labelVersion.setEnabled(false);
         txtPeso.setBounds(130, 130, 100, 20);
