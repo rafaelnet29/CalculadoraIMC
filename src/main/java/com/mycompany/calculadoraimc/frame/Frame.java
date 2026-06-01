@@ -133,23 +133,23 @@ public final class Frame extends JFrame {
         panel = new JPanel();
         
         //configuração dos componentes
-        label.setBounds(20, 2, 270, 110);
+        label.setBounds(30, 2, 270, 110);
         label.setForeground(Color.red);
         label.setFont(new Font("ARIAL", Font.BOLD, 26));
-        labelAltura.setBounds(40, 50, 120, 100);
+        labelAltura.setBounds(45, 50, 120, 100);
         labelAltura.setFont(new Font("ARIAL", Font.BOLD, 18));
-        txtAltura.setBounds(130, 90, 100, 20);
+        txtAltura.setBounds(140, 90, 100, 20);
         txtAltura.setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.RED));
-        labelPeso.setBounds(40, 90, 120, 100);
+        labelPeso.setBounds(50, 90, 120, 100);
         labelPeso.setFont(new Font("ARIAL", Font.BOLD, 18));
         txtPeso.setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.RED));
-        labelVersion.setBounds(10, 280, 50, 20);
+        labelVersion.setBounds(10, 295, 50, 20);
         labelVersion.setEnabled(false);
-        txtPeso.setBounds(130, 130, 100, 20);
-        btnCalcular.setBounds(80, 160, 120, 20);
-        btnSair.setBounds(170, 193, 70, 20);
-        btnLimpar.setBounds(40, 193, 80, 20);
-        txtResultado.setBounds(40, 220, 200, 60);
+        txtPeso.setBounds(140, 130, 100, 20);
+        btnCalcular.setBounds(90, 160, 120, 20);
+        btnSair.setBounds(180, 193, 70, 20);
+        btnLimpar.setBounds(50, 193, 80, 20);
+        txtResultado.setBounds(50, 220, 200, 60);
         txtResultado.setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.BLACK));
         txtResultado.setFont(new Font("ARIAL", Font.BOLD, 14));
         txtResultado.setLineWrap(true);
@@ -159,7 +159,7 @@ public final class Frame extends JFrame {
          * configuração e adição dos componentes 
          * no JPanel
          */
-        panel.setPreferredSize(new Dimension(300, 300));
+        panel.setPreferredSize(new Dimension(320, 330));
         panel.setBackground(Color.CYAN);
         panel.add(label);
         panel.add(labelAltura);
